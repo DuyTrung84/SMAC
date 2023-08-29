@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <title>Gioi thieu</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-white py-1">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex-1 md:flex md:items-center md:space-x-12">
+                    <a class="block text-teal-600" href="trangchu.html">
+                        <span class="sr-only">Home</span>
+                        <img src="./img/Logo.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="md:flex md:items-center md:gap-12">
+                    <nav aria-label="Global" class="hidden lg:block font-medium font-roboto">
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="gioithieu.html">
+                                    Giới thiệu
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="sanpham.html">
+                                    Sản phẩm
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Hoạt động
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="tuyendung.html">
+                                    Tin tức
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="tuyendung.html">
+                                    Tuyển dụng
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="lienhe.html">
+                                    Liên hệ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="flex items-center gap-4">
+                        <div class="sm:flex space-x-4">
+                            <a href="" class="rounded-md my-2.5 text-sm font-medium shadow">
+                                <img src="./img/Logo-languge.svg" alt="">
+                            </a>
+                        </div>
+
+                        <!-- hiện menu -->
+                        <div class="block lg:hidden">
+                            <button onclick="toggleMenu()"
+                                class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <nav style="display: none;" aria-label="Global"
+                        class="lg:hidden border-r-2 pr-4 border-black font-medium font-roboto">
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Giới thiệu
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Sản phẩm
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Dịch vụ
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Tin tức
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Hỗ trợ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                    <!-- menu hiện -->
+
+
+                    <div id="mobile-menu" style="display: none;" class="fixed inset-0 lg:hidden z-50" role="dialog"
+                        aria-modal="true">
+                        <div
+                            class="fixed inset-y-0 right-0 z-[100px] w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                            <div class="lg:hidden">
+                                <button onclick="toggleMenu()"
+                                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="mt-6 flow-root">
+                                <div class="-my-6 divide-y divide-gray-500/10">
+                                    <ul class="leading-9">
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Giới thiệu
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Sản phẩm
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Dịch vụ
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Tin tức
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Hỗ trợ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Banner -->
+    <div id="default-carousel" class="relative w-full h-[550px] md:h-96 lg:h-[650px]" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden rounded-lg h-[550px] md:h-96 lg:h-[650px]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class="relative bg-[url('./img/Banner.svg')] bg-no-repeat ">
+                    <div
+                        class="relative mx-auto max-w-screen-xl px-4 py-6 md:py-20 lg:py-32 sm:px-6 md:flex lg:h-screen md:items-center md:px-8">
+                        <div class="max-w-xl mx-auto text-center ltr:sm:text-left rtl:sm:text-right">
+                            <h1>
+                                <img src="./img/logo-banner.png" class="w-[200px] lg:w-auto md:mx-0 mx-auto" alt="">
+                            </h1>
+
+                            <p class="text-white text-2xl font-medium my-10 max-w-sm lg:max-w-lg">
+                                Chân thành - Sáng tạo - Linh hoạt - Thấu hiểu
+                            </p>
+
+                            <div class="mt-10 flex flex-wrap gap-4 text-center">
+                                <a href="#"
+                                    class="flex items-center gap-3 mx-auto md:mx-0 justify-between block rounded-3xl bg-white px-6 py-3 text-sm font-medium text-orange-500 shadow sm:w-auto">
+                                    <img src="/img/timhieuthemcam.png" alt=""> <span>Xem
+                                        chi
+                                        tiết</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/Img_banner.png" class="w-[300px] lg:w-auto mx-auto md:mx-0" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class="relative bg-[url('./img/Banner.svg')] bg-no-repeat ">
+                    <div
+                        class="relative mx-auto max-w-screen-xl px-4 py-6 md:py-20 lg:py-32 sm:px-6 md:flex lg:h-screen md:items-center md:px-8">
+                        <div class="max-w-xl mx-auto text-center ltr:sm:text-left rtl:sm:text-right">
+                            <h1>
+                                <img src="./img/logo-banner.png" class="w-[200px] lg:w-auto md:mx-0 mx-auto" alt="">
+                            </h1>
+
+                            <p class="text-white text-2xl font-medium my-10 max-w-sm lg:max-w-lg">
+                                Chân thành - Sáng tạo - Linh hoạt - Thấu hiểu
+                            </p>
+
+                            <div class="mt-10 flex flex-wrap gap-4 text-center">
+                                <a href="#"
+                                    class="flex items-center gap-3 mx-auto md:mx-0 justify-between block rounded-3xl bg-white px-6 py-3 text-sm font-medium text-orange-500 shadow sm:w-auto">
+                                    <img src="/img/timhieuthemcam.png" alt=""> <span>Xem
+                                        chi
+                                        tiết</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/Img_banner.png" class="w-[300px] lg:w-auto mx-auto md:mx-0" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class="relative bg-[url('./img/Banner.svg')] bg-no-repeat ">
+                    <div
+                        class="relative mx-auto max-w-screen-xl px-4 py-6 md:py-20 lg:py-32 sm:px-6 md:flex lg:h-screen md:items-center md:px-8">
+                        <div class="max-w-xl mx-auto text-center ltr:sm:text-left rtl:sm:text-right">
+                            <h1>
+                                <img src="./img/logo-banner.png" class="w-[200px] lg:w-auto md:mx-0 mx-auto" alt="">
+                            </h1>
+
+                            <p class="text-white text-2xl font-medium my-10 max-w-sm lg:max-w-lg">
+                                Chân thành - Sáng tạo - Linh hoạt - Thấu hiểu
+                            </p>
+
+                            <div class="mt-10 flex flex-wrap gap-4 text-center">
+                                <a href="#"
+                                    class="flex items-center gap-3 mx-auto md:mx-0 justify-between block rounded-3xl bg-white px-6 py-3 text-sm font-medium text-orange-500 shadow sm:w-auto">
+                                    <img src="/img/timhieuthemcam.png" alt=""> <span>Xem
+                                        chi
+                                        tiết</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/Img_banner.png" class="w-[300px] lg:w-auto mx-auto md:mx-0" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class="relative bg-[url('./img/Banner.svg')] bg-no-repeat ">
+                    <div
+                        class="relative mx-auto max-w-screen-xl px-4 py-6 md:py-20 lg:py-32 sm:px-6 md:flex lg:h-screen md:items-center md:px-8">
+                        <div class="max-w-xl mx-auto text-center ltr:sm:text-left rtl:sm:text-right">
+                            <h1>
+                                <img src="./img/logo-banner.png" class="w-[200px] lg:w-auto md:mx-0 mx-auto" alt="">
+                            </h1>
+
+                            <p class="text-white text-2xl font-medium my-10 max-w-sm lg:max-w-lg">
+                                Chân thành - Sáng tạo - Linh hoạt - Thấu hiểu
+                            </p>
+
+                            <div class="mt-10 flex flex-wrap gap-4 text-center">
+                                <a href="#"
+                                    class="flex items-center gap-3 mx-auto md:mx-0 justify-between block rounded-3xl bg-white px-6 py-3 text-sm font-medium text-orange-500 shadow sm:w-auto">
+                                    <img src="/img/timhieuthemcam.png" alt=""> <span>Xem
+                                        chi
+                                        tiết</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/Img_banner.png" class="w-[300px] lg:w-auto mx-auto md:mx-0" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="flex justify-center mt-5">
+            <div class="flex space-x-3">
+                <button type="button"
+                    class="w-3 h-3 rounded-full bg-FF5C01 border border-orange-500  hover:bg-orange-500"
+                    aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button"
+                    class="w-3 h-3 rounded-full bg-FF5C01 border border-orange-500  hover:bg-orange-500"
+                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button"
+                    class="w-3 h-3 rounded-full bg-FF5C01 border border-orange-500  hover:bg-orange-500"
+                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button"
+                    class="w-3 h-3 rounded-full bg-FF5C01 border border-orange-500  hover:bg-orange-500"
+                    aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            </div>
+        </div>
+
+        <!-- Slider controls -->
+    </div>
+    <!--Content-->
+    <div class="max-w-screen-xl mx-5 lg:mx-52 my-10 grid grid-cols-1 gap-8">
+        <!-- item1 -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+                <img src="/img/gioithieu3.png" class="mx-auto w-[300px] md:w-[480px] h-auto" alt="">
+            </div>
+            <div class="mx-auto">
+                <h2 class="font-bold text-xl md:text-3xl mb-4">Chúng tôi là ai?</h2>
+                <p class="text-base md:text-base">Ngày 27/03/2017: Công ty Cổ phần Công nghệ Thông Tin SMAC Việt Nam
+                    được thành lập bởi những nhà quản lý, chuyên gia công nghệ của các tập đoàn hàng đầu Việt Nam như
+                    FPT, Viettel, Mobifone... SMAC là một trong những công ty công nghệ hàng đầu với đội ngũ chuyên môn
+                    có kinh nghiệm, tâm huyết, sáng tạo và tài năng; chuyên cung cấp các sản phẩm, giải pháp và dịch vụ
+                    công nghệ thông tin cho các khách hàng thuộc khối như Viễn thông, Tài chính, Vận tải, Doanh
+                    nghiệp...</p>
+            </div>
+        </div>
+        <!-- item2 -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div class="md:hidden">
+                <img src="/img/gioithieu1.png" class="mx-auto w-[300px] md:w-[480px] h-auto" alt="">
+            </div>
+            <div class="mx-auto">
+                <h2 class="font-bold text-xl md:text-3xl mb-4">Sứ mệnh</h2>
+                <p class="text-base md:text-base">Chúng tôi tận tâm, tận lực, sáng tạo để tạo ra các sản phẩm và dịch vụ
+                    tốt và hiện
+                    đại để làm hài lòng khách hàng, cải thiện chất lượng cuộc sống; mang đến cho mỗi thành viên một môi
+                    trường phát huy tối đa năng lực của bản thân và cuộc sống sung túc, hạnh phúc</p>
+            </div>
+            <div class="hidden md:block">
+                <img src="/img/gioithieu1.png" class="mx-auto w-[300px] md:w-[480px] h-auto" alt="">
+            </div>
+        </div>
+
+        <!-- item3 -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+                <img src="/img/gioithieu2.png" class="mx-auto w-[300px] md:w-[480px] h-auto" alt="">
+            </div>
+            <div class="mx-auto">
+                <h2 class="font-bold text-xl md:text-3xl mb-4">Tầm nhìn</h2>
+                <p class="text-base md:text-base">Chúng tôi không ngừng mở rộng mạng lưới khách hàng và đối tác trên
+                    khắp thế giới để
+                    trao đổi, áp dụng, nghiên cứu các giải pháp, xu hướng công nghệ trong tương lai và trở thành công ty
+                    hàng đầu thế giới trong việc cung cấp các giải pháp kỹ thuật số</p>
+            </div>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div
+        class="bg-[url('./img/banner-gioithieu.png')] md:bg-[url('./img/banner-gioithieu.png')] bg-no-repeat bg-cover w-full h-[300px] md:h-[450px]">
+        <div class="text-[#FD4303] mx-5 md:mx-10 lg:mx-60 pt-16 md:pt-32">
+            <p class="text-2xl md:text-4xl">Sáng tạo công nghệ</p>
+            <p class="font-bold text-3xl md:text-5xl ml-16 md:ml-40 mt-7">Thay đổi cuộc sống</p>
+        </div>
+    </div>
+    <!-- Values -->
+    <div class="max-w-screen-xl py-10 mx-auto">
+        <header class="text-center w-52 mx-auto">
+            <h2 class=" font-bold sm:text-3xl lg:my-10 ">
+                Giá trị cốt lõi
+                <p class="border-b-4 border-[#FF7E00] my-6 w-1/3 mx-auto"></p>
+            </h2>
+        </header>
+        <ul
+            class="grid grid-cols-1 gap-28 md:gap-10 my-8 pt-20 mx-auto px-5 md:mx-10 lg:mx-36 text-center md:grid-cols-3">
+            <li
+                class="border rounded-2xl text-white bg-[#EA6404] pt-20 flex flex-col relative justify-center items-center shadow-lg">
+                <div class="absolute -top-14 w-28 h-28 transform rotate-45 border-solid border-transparent bg-white">
+                    <div class="bg-[url('./img/timdo.png')] w-32 h-32 justify-center items-center -rotate-45">
+                        <p class="mx-auto pt-6 w-20 h-75 text-6xl font-bold">1</p>
+                    </div>
+                </div>
+                <h2 class="font-bold text-xl py-2 text-center">Sáng tạo</h2>
+                <p class="mx-7 pb-8 text-left text-base">Thúc đẩy sáng tạo trong mỗi cá nhân & tập thể, không ngừng theo
+                    đuổi
+                    giấc mơ sáng tạo công nghệ, thay đổi cuộc sống người Việt</p>
+            </li>
+            <li
+                class="border rounded-2xl text-white bg-[#FFBF1C] pt-20 flex flex-col relative justify-center items-center shadow-lg">
+                <div class="absolute -top-14 w-28 h-28 transform rotate-45 border-solid border-transparent bg-white">
+                    <div class="bg-[url('./img/timvang.png')] w-32 h-32 justify-center items-center -rotate-45">
+                        <p class="mx-auto pt-6 w-20 h-75 text-6xl font-bold">2</p>
+                    </div>
+                </div>
+                <h2 class="font-bold text-xl py-2 text-center">Tiên phong</h2>
+                <p class="mx-7 pb-8 text-left text-base">Không ngại thử thách, tiên phong khai phá công nghệ mới, phát
+                    triển các sản phẩm với hàm lượng công nghệ cao & có tính ứng dụng thực tiễn</p>
+            </li>
+            <li
+                class="border rounded-2xl text-white bg-[#38D500] pt-20 flex flex-col relative justify-center items-center shadow-lg">
+                <div class="absolute -top-14 w-28 h-28 transform rotate-45 border-solid border-transparent bg-white">
+                    <div class="bg-[url('./img/timluc.png')] w-32 h-32 justify-center items-center -rotate-45">
+                        <p class="mx-auto pt-6 w-20 h-75 text-6xl font-bold">3</p>
+                    </div>
+                </div>
+                <h2 class="font-bold text-xl py-2 text-center">Học hỏi</h2>
+                <p class="mx-7 pb-8 text-left text-base">Phát huy tinh thần học hỏi mọi lúc mọi nơi từ công việc hàng
+                    ngày nhằm hoàn thiện bản thân, hoàn thiện sản phẩm phục vụ người Việt</p>
+            </li>
+        </ul>
+        <ul
+            class="grid grid-cols-1 gap-28 md:gap-10 my-8 pt-20 mx-auto px-5 md:mx-10 lg:mx-56 text-center md:grid-cols-2">
+            <li
+                class="border rounded-2xl text-white bg-[#11A9FF] pt-20 flex flex-col relative items-center shadow-lg w-full md:w-80 ml-auto">
+                <div class="absolute -top-14 w-28 h-28 transform rotate-45 border-solid border-transparent bg-white">
+                    <div class="bg-[url('./img/timlam.png')] w-32 h-32 -rotate-45">
+                        <p class="mx-auto pt-6 w-20 h-75 text-6xl font-bold">4</p>
+                    </div>
+                </div>
+                <h2 class="font-bold text-xl py-2 text-center">Trung thực</h2>
+                <p class="mx-7 pb-8 text-left text-base">Đề cao tính trung thực trong mỗi cá nhân và tập thể, trung thực
+                    trong nội bộ tổ chức, trung thực với khách hàng và đối tác</p>
+            </li>
+            <li
+                class="border rounded-2xl text-white bg-[#E335FF] pt-20 flex flex-col relative items-center shadow-lg md:w-80 w-full">
+                <div class="absolute -top-14 w-28 h-28 transform rotate-45 border-solid border-transparent bg-white">
+                    <div class="bg-[url('./img/timtim.png')] w-32 h-32 justify-center items-center -rotate-45">
+                        <p class="mx-auto pt-6 w-20 h-75 text-6xl font-bold">5</p>
+                    </div>
+                </div>
+                <h2 class="font-bold text-xl py-2 text-center">Đồng đội</h2>
+                <p class="mx-7 pb-8 text-left text-base">Phát huy tinh thần đồng đội, đồng chí trong tập thể. Tập thể
+                    gắn kết cao mới có thể tạo ra các sản phẩm làm hài lòng hàng triệu khách hàng</p>
+            </li>
+        </ul>
+    </div>
+    <!-- Customer -->
+    <div id="indicators-carousel" class="relative bg-[#F4F4F4] py-10 mx-auto mt-16 md:mt-0" data-carousel="static">
+        <header class="text-center w-52 mx-auto">
+            <h2 class=" font-bold sm:text-3xl  ">
+                Khách hàng
+                <p class="border-b-4 border-[#FF7E00] my-6 w-1/3 mx-auto"></p>
+            </h2>
+        </header>
+        <p class="max-w-md mx-auto mb-6 text-gray-500 text-center">
+            Những doanh nghiệp đồng hành cùng chúng tôi
+        </p>
+        <!-- Carousel wrapper -->
+        <div class="relative h-36 overflow-hidden rounded-lg">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                <div class="grid md:grid-cols-3 lg:grid-cols-6 grid-cols-2 mx-[83px] md:mx-56 gap-2 md:gap-4">
+                    <div class="">
+                        <img src="/img/logo-viettel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-bitel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-fptp.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-mytel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-vietnampost.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-unitel.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="grid md:grid-cols-3 lg:grid-cols-6 grid-cols-2 mx-[83px] md:mx-56 gap-2 md:gap-4">
+                    <div class="">
+                        <img src="/img/logo-viettel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-bitel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-fptp.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-mytel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-vietnampost.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-unitel.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="grid md:grid-cols-3 lg:grid-cols-6 grid-cols-2 mx-[83px] md:mx-56 gap-2 md:gap-4">
+                    <div class="">
+                        <img src="/img/logo-viettel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-bitel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-fptp.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-mytel.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-vietnampost.png" alt="">
+                    </div>
+                    <div>
+                        <img src="/img/logo-unitel.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-10 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full bg-FF5C01 border border-orange-500  hover:bg-orange-500"
+                aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-FF5C01 border border-orange-500  hover:bg-orange-500"
+                aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-FF5C01 border border-orange-500  hover:bg-orange-500"
+                aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+            <div class="grid-flow-col-1 lg:flex justify-between">
+                <div class="text-teal-600 mb-6 lg:mb-0">
+                    <img src="/img/Logo.svg" alt="">
+                </div>
+
+                <div class="grid grid-cols-2 md:gap-6 md:grid-cols-3 md:col-span-2">
+                    <div>
+                        <ul class=" space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    Về SMAC
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    SẢN PHẨM
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    DỊCH VỤ
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class=" space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    TIN TỨC
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    KHUYẾN MÃI
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    HỖ TRỢ
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-gray-900 font-bold">THÔNG TIN LIÊN HỆ</p>
+
+                        <div></div>
+                        <div class="mt-6 space-y-4 text-sm">
+                            <p class="text-gray-700 transition hover:opacity-75">
+                                <span class="font-semibold">SDT:</span> (+84)389.888.868
+                            </p>
+                            <p class="text-gray-700 transition hover:opacity-75">
+                                <span class="font-semibold">Email:</span> vietdt@smac.com.vn
+                            </p>
+                            <p class="text-gray-700 transition hover:opacity-75">
+                                <span class="font-semibold">Địa chỉ:</span> 39 Ven Hồ, Hạ Đình
+                            </p>
+                            <ul class="mt-8 flex gap-6">
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <span class="sr-only">Facebook</span>
+
+                                        <img src="img/facebook.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <span class="sr-only">Instagram</span>
+
+                                        <img src="img/instagram.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <span class="sr-only">Twitter</span>
+
+                                        <img src="img/twitter.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <img src="img/in.png" alt="" class="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#2D2D2D]">
+            <p class="text-center text-white py-5 text-sm font-semibold ">© 2019 Smac Center</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        FF8A01: '#FF8A01'
+                    },
+                    height: {
+                        '700': '700px',
+                        '500': '500px',
+                        '600': '650px',
+                        '400': '400px'
+
+                    },
+                    dropShadow: {
+                        '3xl': [
+                            ' 0px 0px 15px #f97316',
+                        ],
+                    },
+                    boxShadow: {
+                        '3xl': '0 0px 25px -10px rgba(0, 0, 0, 0.3)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="main.js"></script>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <title>Lien he</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-white py-1">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex-1 md:flex md:items-center md:space-x-12">
+                    <a class="block text-teal-600" href="trangchu.html">
+                        <span class="sr-only">Home</span>
+                        <img src="./img/Logo.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="md:flex md:items-center md:gap-12">
+                    <nav aria-label="Global" class="hidden lg:block font-medium font-roboto">
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="gioithieu.html">
+                                    Giới thiệu
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="sanpham.html">
+                                    Sản phẩm
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Hoạt động
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="tuyendung.html">
+                                    Tin tức
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="tuyendung.html">
+                                    Tuyển dụng
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="lienhe.html">
+                                    Liên hệ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="flex items-center gap-4">
+                        <div class="sm:flex space-x-4">
+                            <a href="" class="rounded-md my-2.5 text-sm font-medium shadow">
+                                <img src="./img/Logo-languge.svg" alt="">
+                            </a>
+                        </div>
+
+                        <!-- hiện menu -->
+                        <div class="block lg:hidden">
+                            <button onclick="toggleMenu()"
+                                class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <nav style="display: none;" aria-label="Global"
+                        class="lg:hidden border-r-2 pr-4 border-black font-medium font-roboto">
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Giới thiệu
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Sản phẩm
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Dịch vụ
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Tin tức
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-black transition hover:text-gray-500/75" href="/">
+                                    Hỗ trợ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                    <!-- menu hiện -->
+
+
+                    <div id="mobile-menu" style="display: none;" class="fixed inset-0 lg:hidden z-50" role="dialog"
+                        aria-modal="true">
+                        <div
+                            class="fixed inset-y-0 right-0 z-[100px] w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                            <div class="lg:hidden">
+                                <button onclick="toggleMenu()"
+                                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="mt-6 flow-root">
+                                <div class="-my-6 divide-y divide-gray-500/10">
+                                    <ul class="leading-9">
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Giới thiệu
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Sản phẩm
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Dịch vụ
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Tin tức
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                                Hỗ trợ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content-->
+
+    <div class="mx-auto max-w-screen-xl px-5 md:px-10">
+        <h2 class="text-2xl md:text-4xl font-medium my-6 md:my-10">Liên hệ</h2>
+        <div class="flex flex-col md:flex-row mb-8 justify-between md:items-baseline">
+            <div class="leading-8 md:ml-4">
+                <p class="font-bold">Trung tâm hỗ trợ khách hàng SMAC</p>
+                <div class="flex gap-3 md:gap-6 items-center mt-2">
+                    <img src="img/tuvan.png" alt="" class="w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
+                    <p>Tư vấn: <span class="font-bold">1234567890</span></p>
+                </div>
+                <div class="flex gap-3 md:gap-6 items-center mt-2">
+                    <img src="img/setting.png" alt="">
+                    <p>Hỗ trợ kĩ thuật: <span class="font-bold">1234567890</span></p>
+                </div>
+                <div class="flex gap-3 md:gap-6 items-center mt-2">
+                    <img src="img/email.png" alt="">
+                    <p>Email: <span class="font-bold">smac@.com.vn</span></p>
+                </div>
+            </div>
+            <div class="md:w-1/3 mt-6 md:mt-0">
+                <p class="font-bold my-2 py-3">Liên hệ các vấn đề khác</p>
+                <div class="flex items-baseline mt-2">
+                    <img src="img/map.png" class="w-[20px] h-[23px] mr-3 md:w-[23px] md:h-[26px] " alt="">
+                    <p class="text-sm md:text-base">Công Ty Cổ Phần Công Nghệ SMAC: Số 10, ngõ 18, đường Nguyễn
+                        Khuyến,
+                        Phường Văn Quán, Quận Hà Đông, Hà Nội</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-[#F4F4F4]">
+        <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+            <div class="grid-flow-col-1 lg:flex justify-between">
+                <div class="text-teal-600 mb-6 lg:mb-0">
+                    <img src="/img/Logo.svg" alt="">
+                </div>
+
+                <div class="grid grid-cols-2 md:gap-6 md:grid-cols-3 md:col-span-2">
+                    <div>
+                        <ul class=" space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    Về SMAC
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    SẢN PHẨM
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    DỊCH VỤ
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class=" space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    TIN TỨC
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    KHUYẾN MÃI
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-bold text-gray-900 transition hover:opacity-75">
+                                    HỖ TRỢ
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-gray-900 font-bold">THÔNG TIN LIÊN HỆ</p>
+
+                        <div></div>
+                        <div class="mt-6 space-y-4 text-sm">
+                            <p class="text-gray-700 transition hover:opacity-75">
+                                <span class="font-semibold">SDT:</span> (+84)389.888.868
+                            </p>
+                            <p class="text-gray-700 transition hover:opacity-75">
+                                <span class="font-semibold">Email:</span> vietdt@smac.com.vn
+                            </p>
+                            <p class="text-gray-700 transition hover:opacity-75">
+                                <span class="font-semibold">Địa chỉ:</span> 39 Ven Hồ, Hạ Đình
+                            </p>
+                            <ul class="mt-8 flex gap-6">
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <span class="sr-only">Facebook</span>
+
+                                        <img src="img/facebook.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <span class="sr-only">Instagram</span>
+
+                                        <img src="img/instagram.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <span class="sr-only">Twitter</span>
+
+                                        <img src="img/twitter.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/" rel="noreferrer" target="_blank"
+                                        class="text-gray-700 transition hover:opacity-75">
+                                        <img src="img/in.png" alt="" class="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#2D2D2D]">
+            <p class="text-center text-white py-5 text-sm font-semibold ">© 2019 Smac Center</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        FF8A01: '#FF8A01'
+                    },
+                    height: {
+                        '700': '700px',
+                        '500': '500px',
+                        '600': '650px',
+                        '400': '400px'
+
+                    },
+                    dropShadow: {
+                        '3xl': [
+                            ' 0px 0px 15px #f97316',
+                        ],
+                    },
+                    boxShadow: {
+                        '3xl': '0 0px 25px -10px rgba(0, 0, 0, 0.3)',
+                    },
+                    lineHeight: {
+                        '12': '3rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="main.js"></script>
+</body>
+
+
+
+
+</html>
